@@ -8,4 +8,4 @@ python3 -m pip install ansible
 
 pip3 install paramiko
 
-ansible-galaxy collection install community.general
+ansible-galaxy collection install community.general
