@@ -17,5 +17,7 @@
 
 # Discord vars
 
- id: 916725305945759804 #test discord, will be delete after testing
- token: J56EtUtZhmtLoGxD6q7amj1hs7proHwgFFO115KKLC2WzX57PSUKbMcYlIYvQPY1mDRN #test discord, will be delete after testing
+# Format from Discord webhook URL: /webhooks/{webhook.id}/{webhook.token}
+
+ id: Your Discord ID 
+ token: Your Discord Token
