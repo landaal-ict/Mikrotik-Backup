@@ -1,0 +1,8 @@
+[mikrotik]
+Landaal-MK ansible_host=0.0.0.0 #change this to the ip or dnsname your mikrotik router.
+
+[mikrotik:vars]
+ansible_port = 22
+ansible_connection = network_cli
+ansible_network_os = routeros
+gather_facts = false

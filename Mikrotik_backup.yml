@@ -1,0 +1,26 @@
+---
+- name: Landaal - MikroTik Backup Automation
+  hosts: mikrotik
+  connection: paramiko
+  gather_facts: no
+  ignore_errors: yes
+  vars_files:
+    - vars.yml
+
+  tasks:
+     - name: Backup filename.backup
+       routeros_command:
+         commands:
+             - /system backup save name={{inventory_hostname}}
+
+     - name: Backup filename.rsc
+       routeros_command:
+         commands:
+             - /export file={{inventory_hostname}}
+
+     - name: Download Backup files to localhost
+       with_items:
+             - "{{inventory_hostname}}.rsc"
+             - "{{inventory_hostname}}.backup"
+       command: sshpass -p {{ ansible_password }} scp -o StrictHostKeyChecking=no -P {{ ansible_port }} {{ ansible_user }}@{{ ansible_host }}:{{ item }} {{ backup_path }}/{{ date }}_{{ item }}
+       delegate_to: localhost

@@ -1,0 +1,21 @@
+ # Ftp Server vars
+ 
+ ftpserver_var: 0.0.0.0 # Set here the ip or hostname of your ftp server
+ ftpuser_var: username # set here your ftp username
+ ftppass_var: password # set here your ftp user password
+ date: "{{ lookup('pipe', 'date +%Y%m%d_%H%M') }}"
+
+# Backup location
+
+ backup_path: "~/backups"  # change this to your local backup loction.
+
+# Mikrotik user vars
+
+ ansible_user: username  #change this to the username of the user that can login to mikrotik
+ ansible_password: password #password of your mikrotik
+
+ # Telegram vars
+
+ chat_id: yourtelegramid
+ chat_token: yourchattoken
+ 
