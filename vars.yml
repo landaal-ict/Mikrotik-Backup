@@ -11,8 +11,11 @@
 
 # Mikrotik user vars
 
+ ansible_user: username  #change this to the username of the user that can login to mikrotik
+ ansible_password: password #password of your mikrotik
 
- # Discord vars
 
- id: 916725305945759804
- token: J56EtUtZhmtLoGxD6q7amj1hs7proHwgFFO115KKLC2WzX57PSUKbMcYlIYvQPY1mDRN
+# Discord vars
+
+ id: 916725305945759804 #test discord, will be delete after testing
+ token: J56EtUtZhmtLoGxD6q7amj1hs7proHwgFFO115KKLC2WzX57PSUKbMcYlIYvQPY1mDRN #test discord, will be delete after testing
