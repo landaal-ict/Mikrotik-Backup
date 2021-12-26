@@ -24,3 +24,16 @@
              - "{{inventory_hostname}}.backup"
        command: sshpass -p {{ ansible_password }} scp -o StrictHostKeyChecking=no -P {{ ansible_port }} {{ ansible_user }}@{{ ansible_host }}:{{ item }} {{ backup_path }}/{{ date }}_{{ item }}
        delegate_to: localhost
+
+     - name: send completion alert Discord
+       include_tasks: playbooks/send_comp_alert.yml
+       tags: always
+       when:
+        - task_failed is not defined
+
+     - name: send failure alert Discord
+       include_tasks: playbooks/send_failure_alert.yml
+       tags: always
+       when:
+         - task_failed is defined
+         sss- task_failed == true
