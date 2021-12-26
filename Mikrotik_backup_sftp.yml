@@ -31,13 +31,13 @@
            - /tool fetch address={{ftpserver_var}} src-path={{inventory_hostname}}.rsc user={{ftpuser_var}} password={{ftppass_var}} mode=ftp dst-path=/Mikrotik-backups/{{inventory_hostname}}_{{date}}.rsc upload=yes
 
       
-   - name: send completion alert Telegram
+   - name: send completion alert Discord
      include_tasks: playbooks/send_comp_alert.yml
      tags: always
      when:
       - task_failed is not defined
 
-   - name: send failure alert Telegram
+   - name: send failure alert Discord
      include_tasks: playbooks/send_failure_alert.yml
      tags: always
      when:

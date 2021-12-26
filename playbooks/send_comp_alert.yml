@@ -1,14 +1,8 @@
-- name: notify healthchecks.io that the job ran
-  uri:
-    url: https://hc-ping.com/{{ healthcheck_uuid }}
-  changed_when: False
-  when: healthcheck_uuid is defined
-
-- name: send completion notification via telegram
+- name: send completion notification to Discord
   tags: always
-  telegram:
-    token: "{{ telegram_token }}"
-    chat_id: "{{ telegram_chat_id }}"
+  community.general.discord:
+    webhook_id: "{{id}}"
+    webhook_token: "{{token}}"
     msg_format: markdown
     msg: "✔️  Mikrotik Backup Finished *{{inventory_hostname}}*"
   changed_when: False
