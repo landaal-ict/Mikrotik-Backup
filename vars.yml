@@ -11,11 +11,8 @@
 
 # Mikrotik user vars
 
- ansible_user: username  #change this to the username of the user that can login to mikrotik
- ansible_password: password #password of your mikrotik
 
  # Telegram vars
 
- chat_id: yourtelegramid
- chat_token: yourchattoken
- 
+ chat_id: chatid
+ chat_token: token 

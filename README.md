@@ -14,4 +14,7 @@ Control Mikrotik with Ansible
 
 ## How to use
 
+- Run install script as root user or sudo: sudo ./install.sh
+- change var.yml file with your settings
+- change hosts file with your mikrotik ip's or dnsname
 
