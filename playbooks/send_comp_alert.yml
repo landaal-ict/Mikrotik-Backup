@@ -3,6 +3,5 @@
   community.general.discord:
     webhook_id: "{{id}}"
     webhook_token: "{{token}}"
-    msg_format: markdown
-    msg: "✔️  Mikrotik Backup Finished *{{inventory_hostname}}*"
+    content: "✔️  Mikrotik Backup Finished *{{inventory_hostname}}*"
   changed_when: False
