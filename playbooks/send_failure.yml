@@ -1,7 +1,7 @@
-- name: zend bericht naar discord
+- name: send message to Discord
   community.general.discord:
-    webhook_id: "916725305945759804"
-    webhook_token: "J56EtUtZhmtLoGxD6q7amj1hs7proHwgFFO115KKLC2WzX57PSUKbMcYlIYvQPY1mDRN"
+    webhook_id: "{{id}}"
+    webhook_token: "{{token}}"
     content: "⚠️  Mikrotik Backup failed on *{{inventory_hostname}}*"
  
 
