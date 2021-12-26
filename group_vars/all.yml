@@ -1,5 +1,0 @@
----
-# Change the chat id and token in the vars.yml file!
-
-telegram_chat_id: "{{chat_id}}"
-telegram_token: "{{chat_token}}"
